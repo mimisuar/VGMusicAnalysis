@@ -4,7 +4,8 @@ games_file = "games.json"
 debug_print = True
 games = None
 
-# to preserve what I did before
+# backwards compatability. This function was used back when the game database was a python dictionary :puke:
+# now its a very lovely json file!
 def verify(): 
     global games
     if games == None:

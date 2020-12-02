@@ -28,12 +28,12 @@ def parse_vgmusic():
                         if name:
                             game_name = name
 
-                            config_games[game_name] = {"console": console_name, "year": 2000, "origin": "None", "songs": {}, "genre": [], "theme": "None"}
+                            config_games[game_name] = {"console": console_name, "year": 2000, "origin": "None", "songs": {}, "genre": [], "theme": "None", "id": 0}
                         elif ".mid" in sub_link["href"]:
                             song_name = simplify(sub_link.string)
                             #print(game_name + "/" + song_name + ": "+ sub_link["href"])
                             song_url = console_url + str(sub_link["href"])
-                            print(song_url)
+                            #print(song_url)
                             config_games[game_name]["songs"][song_name] = song_url
     else:
         r.raise_for_status()
