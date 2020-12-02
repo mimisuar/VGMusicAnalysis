@@ -20,10 +20,10 @@ def mkdir(dir_name: str) -> None:
 
 def download_all_music() -> None:
     """ 
-    Attempts to download music files from vgmusic.com. Configure in vgdownloader_config.py
+    Attempts to download music files from vgmusic.com. Configure in games.json.
     """
     config.verify()
-    config.debug_print = False
+    #config.debug_print = False
 
     process_count = 0
     failed_count = 0
@@ -42,14 +42,21 @@ def download_all_music() -> None:
             
             song_url = game["songs"][song_name]
             try:
-                song = converter.parse(song_url)
-                song.write(fp=output_file, fmt="midi")
+                #song = converter.parse(song_url)
+                #song.write(fp=output_file, fmt="midi")
+                response = requests.get(song_url)
+                if response.status_code == requests.codes.ok:
+                    with open(output_file, "wb") as midifile:
+                        midifile.write(response.content)
+                else:
+                    response.raise_for_status()
+
                 print2(game_name + "/" + song_name + " downloaded.")
             except Exception as e:
                 failed_count += 1
                 print("Failed to get " + game_name + "/" + song_name + ":\n" + str(e))
     
-    config.debug_print = True
+    #config.debug_print = True
     print2("Processed {} songs.".format(process_count))
     if failed_count > 0:
         print2("Failed {} times.".format(failed_count))

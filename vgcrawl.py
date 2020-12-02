@@ -5,7 +5,7 @@ import json
 base_url = "http://vgmusic.com"
 
 def simplify(obj) -> str:
-    return str(obj).lower().replace(" ", "").replace("_", "").replace("\"", "").replace("(", "").replace(")", "")
+    return str(obj).lower().replace(" ", "_").replace("\"", "").replace("(", "").replace(")", "").replace("/", "_").replace("\\", "_")
 
 def parse_vgmusic():
     config_games = {}
@@ -32,7 +32,8 @@ def parse_vgmusic():
                         elif ".mid" in sub_link["href"]:
                             song_name = simplify(sub_link.string)
                             #print(game_name + "/" + song_name + ": "+ sub_link["href"])
-                            song_url = console_url + str(sub_link["href"])[1:]
+                            song_url = console_url + str(sub_link["href"])
+                            print(song_url)
                             config_games[game_name]["songs"][song_name] = song_url
     else:
         r.raise_for_status()
