@@ -1,4 +1,5 @@
 from bs4 import BeautifulSoup
+from igdb.wrapper import IGDBWrapper
 import requests
 import json
 
@@ -44,4 +45,12 @@ if __name__ == "__main__":
     #parse_vgmusic()
     with open("secrets/igbd_auth.json", "r") as auth_file:
         auth = json.loads(auth_file.read())
-    print(auth)
+
+    auth_res = requests.post(
+        "https://id.twitch.tv/oauth2/token?client_id={0}&client_secret={1}&grant_type=client_credentials".format(auth["client-id"], auth["token"]))
+
+    if auth_res.status_code != requests.codes.ok:
+        auth_res.raise_for_status()
+    auth_data = json.loads(auth_res.text)
+
+    print(auth_data)
