@@ -1,3 +1,9 @@
+# downloaded music, should not be pushed to the git :)
+vgmusic_downloads/
+
+# VSCode stuff
+.vscode/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
