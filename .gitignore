@@ -1,6 +1,9 @@
 # downloaded music, should not be pushed to the git :)
 vgmusic_downloads/
 
+# so close, yet so far...
+secrets/
+
 # VSCode stuff
 .vscode/
 
