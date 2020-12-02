@@ -1,7 +1,6 @@
 from bs4 import BeautifulSoup
 import requests
 import json
-from igdbwrapper import IGDBWrapper
 
 base_url = "http://vgmusic.com"
 
@@ -42,9 +41,4 @@ def parse_vgmusic():
         games.write(json.dumps(config_games, indent=4))
 
 if __name__ == "__main__":
-    #parse_vgmusic()
-    with open("secrets/igbd_auth.json", "r") as auth_file:
-        auth = json.loads(auth_file.read())
-
-    wrapper = IGDBWrapper(auth["client-id"], auth["token"])
-    wrapper.auth()
+    parse_vgmusic()

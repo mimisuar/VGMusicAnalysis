@@ -1,0 +1,383 @@
+[
+    {
+        "id": 70,
+        "aggregated_rating": 92.0,
+        "aggregated_rating_count": 1,
+        "category": 0,
+        "cover": 71,
+        "created_at": 1297900800,
+        "external_games": [
+            8545,
+            78221,
+            154955,
+            1193716
+        ],
+        "first_release_date": 825984000,
+        "follows": 2,
+        "game_modes": [
+            1
+        ],
+        "genres": [
+            5,
+            13,
+            15
+        ],
+        "involved_companies": [
+            709
+        ],
+        "keywords": [
+            453,
+            970,
+            1025,
+            1669,
+            3782,
+            6351
+        ],
+        "name": "Terra Nova: Strike Force Centauri",
+        "platforms": [
+            13
+        ],
+        "player_perspectives": [
+            1
+        ],
+        "rating": 70.0,
+        "rating_count": 2,
+        "release_dates": [
+            544
+        ],
+        "screenshots": [
+            84914,
+            84915,
+            84916,
+            84917,
+            84918
+        ],
+        "similar_games": [
+            13200,
+            16806,
+            17130,
+            24620,
+            25311,
+            34823,
+            55038,
+            68286,
+            68287
+        ],
+        "slug": "terra-nova-strike-force-centauri",
+        "summary": "Lead an elite fighting team battling for freedom from the sinister forces of the Earth Hegemony. Engage in combat on the bloody battlefields of four unique worlds. Encased in your Powered Battle Armour (PBA) you are an unstoppable fighting force.",
+        "tags": [
+            1,
+            18,
+            268435461,
+            268435469,
+            268435471,
+            536871365,
+            536871882,
+            536871937,
+            536872581,
+            536874694,
+            536877263
+        ],
+        "themes": [
+            1,
+            18
+        ],
+        "total_rating": 81.0,
+        "total_rating_count": 3,
+        "updated_at": 1571270400,
+        "url": "https://www.igdb.com/games/terra-nova-strike-force-centauri",
+        "videos": [
+            506
+        ],
+        "websites": [
+            23691,
+            23692,
+            119708
+        ],
+        "checksum": "987b8ba1-56a2-09eb-cf31-cf4dca3eab46"
+    },
+    {
+        "id": 40104,
+        "category": 0,
+        "created_at": 1498435200,
+        "external_games": [
+            20127,
+            1988884
+        ],
+        "first_release_date": 536457600,
+        "genres": [
+            5
+        ],
+        "name": "Dogou Souken",
+        "platforms": [
+            52
+        ],
+        "release_dates": [
+            91007
+        ],
+        "similar_games": [
+            12364,
+            27270,
+            43367,
+            103281,
+            103292,
+            103298,
+            103301,
+            105049,
+            106805
+        ],
+        "slug": "dogou-souken",
+        "summary": "An overhead-view shoot'em up game.",
+        "tags": [
+            268435461
+        ],
+        "updated_at": 1604620800,
+        "url": "https://www.igdb.com/games/dogou-souken",
+        "checksum": "5e7446ff-58d9-e744-f0d3-5e10241304c1"
+    },
+    {
+        "id": 51663,
+        "category": 0,
+        "created_at": 1500595200,
+        "external_games": [
+            74744,
+            123111,
+            1896735
+        ],
+        "name": "The Firemen 2: Pete & Danny",
+        "slug": "the-firemen-2-pete-and-danny",
+        "updated_at": 1598400000,
+        "url": "https://www.igdb.com/games/the-firemen-2-pete-and-danny",
+        "checksum": "e70b1fc2-8341-14f9-adc8-8cb1ba60b913"
+    },
+    {
+        "id": 86911,
+        "category": 0,
+        "cover": 62939,
+        "created_at": 1518566400,
+        "external_games": [
+            223804,
+            1984585
+        ],
+        "first_release_date": 1381968000,
+        "follows": 1,
+        "keywords": [
+            611
+        ],
+        "name": "Baccarat - Best Casino Betting Game",
+        "platforms": [
+            14
+        ],
+        "release_dates": [
+            147254
+        ],
+        "screenshots": [
+            185874,
+            185875,
+            185883,
+            185886,
+            185887
+        ],
+        "similar_games": [
+            59426,
+            75894,
+            86811,
+            86969,
+            86981,
+            86987,
+            87087,
+            89098,
+            91012
+        ],
+        "slug": "baccarat-best-casino-betting-game",
+        "summary": "Baccarat is here to entertain you and challenge your luck.\n\nBaccarat is a casinos based game played worldwide. It is purely a game of chance and not strategy or skills required to win the game.\n\nBaccarat is a comparing card game played between two hands, the \"player\" and the \"banker.\" Each baccarat coup has three possible outcomes: \"player\" (player has the higher score), \"banker,\" and \"tie.\"\n\nGame features:\n\n\u2022Starters get 1000 Chips\n\u2022Daily bonus on return to play\n\u2022Awesome Casino Baccarat\n\u2022Polished controls",
+        "tags": [
+            536871523
+        ],
+        "updated_at": 1604620800,
+        "url": "https://www.igdb.com/games/baccarat-best-casino-betting-game",
+        "checksum": "1c5f5fa7-b6e1-cc6a-2b82-29c13b148ef0"
+    },
+    {
+        "id": 68841,
+        "category": 0,
+        "cover": 97021,
+        "created_at": 1506470400,
+        "external_games": [
+            185421,
+            186839,
+            1905789
+        ],
+        "first_release_date": 1506988800,
+        "game_modes": [
+            2
+        ],
+        "genres": [
+            15,
+            16
+        ],
+        "keywords": [
+            970,
+            3171
+        ],
+        "name": "Captivus",
+        "platforms": [
+            6
+        ],
+        "release_dates": [
+            114619
+        ],
+        "screenshots": [
+            126622,
+            126623,
+            126624,
+            126625,
+            126626
+        ],
+        "similar_games": [
+            11666,
+            13200,
+            13660,
+            16806,
+            17130,
+            24620,
+            32510,
+            34823,
+            102057
+        ],
+        "slug": "captivus",
+        "status": 4,
+        "summary": "Join the movement! Build a deck, equip your ship, and take on others in intense 1v1 card battles!",
+        "tags": [
+            18,
+            268435471,
+            268435472,
+            536871882,
+            536874083
+        ],
+        "themes": [
+            18
+        ],
+        "updated_at": 1598400000,
+        "url": "https://www.igdb.com/games/captivus",
+        "websites": [
+            58090,
+            58091
+        ],
+        "checksum": "6bf91ba1-b87f-b82c-8da6-e6259410c339"
+    },
+    {
+        "id": 33284,
+        "category": 0,
+        "created_at": 1495670400,
+        "external_games": [
+            5560,
+            1947044
+        ],
+        "first_release_date": 1457740800,
+        "game_modes": [
+            1
+        ],
+        "genres": [
+            32
+        ],
+        "name": "One way to exit",
+        "platforms": [
+            6
+        ],
+        "release_dates": [
+            77755
+        ],
+        "screenshots": [
+            58492,
+            58493,
+            58494,
+            58495,
+            58496
+        ],
+        "similar_games": [
+            32902,
+            37419,
+            40524,
+            43367,
+            105233,
+            111130,
+            113895,
+            119121,
+            119493
+        ],
+        "slug": "one-way-to-exit",
+        "summary": "Move forward or backward in search of an exit, but remember, if you started moving you can not stop, and in any case, do not touch the walls, otherwise you have to start all over again.",
+        "tags": [
+            1,
+            268435488
+        ],
+        "themes": [
+            1
+        ],
+        "updated_at": 1604620800,
+        "url": "https://www.igdb.com/games/one-way-to-exit",
+        "checksum": "334d534d-8f5b-3cf8-90b4-240e6daa97fc"
+    },
+    {
+        "id": 104748,
+        "category": 0,
+        "created_at": 1530489600,
+        "external_games": [
+            1155919,
+            1972586
+        ],
+        "name": "Space station - build your own ISS",
+        "slug": "space-station-build-your-own-iss",
+        "updated_at": 1604620800,
+        "url": "https://www.igdb.com/games/space-station-build-your-own-iss",
+        "checksum": "d49fe10f-a810-bb6a-3946-3c0b83f7fe44"
+    },
+    {
+        "id": 85450,
+        "category": 0,
+        "created_at": 1517356800,
+        "external_games": [
+            221231,
+            1748471,
+            1991656
+        ],
+        "involved_companies": [
+            85230
+        ],
+        "name": "Transformers Prime: The Game",
+        "slug": "transformers-prime-the-game",
+        "updated_at": 1604620800,
+        "url": "https://www.igdb.com/games/transformers-prime-the-game",
+        "checksum": "d27c77be-e83a-23fe-6b50-1eb1aa034485"
+    },
+    {
+        "id": 53297,
+        "category": 0,
+        "created_at": 1501545600,
+        "external_games": [
+            86600
+        ],
+        "name": "Lords of Xulima: The Talisman of Golot Edition",
+        "slug": "lords-of-xulima-the-talisman-of-golot-edition",
+        "updated_at": 1602201600,
+        "url": "https://www.igdb.com/games/lords-of-xulima-the-talisman-of-golot-edition",
+        "version_parent": 9191,
+        "version_title": "The Talisman of Golot Edition",
+        "checksum": "0fff385a-3eb2-8a6d-ea81-64b900119e74"
+    },
+    {
+        "id": 89616,
+        "category": 0,
+        "created_at": 1519948800,
+        "external_games": [
+            269608,
+            1949905
+        ],
+        "name": "Bubble Whirl Shooter",
+        "slug": "bubble-whirl-shooter",
+        "updated_at": 1604620800,
+        "url": "https://www.igdb.com/games/bubble-whirl-shooter",
+        "checksum": "90910051-5a45-0ef0-6082-40d391b48d79"
+    }
+]

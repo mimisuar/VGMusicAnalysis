@@ -1,5 +1,5 @@
 # a module that helps with download files from vgmusic.com :)
-from music21 import converter
+import requests
 import os
 import vgconfig as config
 from typing import Tuple, List
