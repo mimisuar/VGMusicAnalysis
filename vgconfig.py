@@ -13,11 +13,11 @@ def verify():
             games = json.loads(file.read())
         
 
-if __name__ == "__main__":
-    try:
-        verify()
-        print("This file is configured correctly!")
-    except AssertionError as e:
-        print("Failed to verify.")
-        print(str(e))
+#if __name__ == "__main__":
+#    try:
+#        verify()
+#        print("This file is configured correctly!")
+#    except AssertionError as e:
+#        print("Failed to verify.")
+#        print(str(e))
 

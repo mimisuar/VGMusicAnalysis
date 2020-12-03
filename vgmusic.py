@@ -36,39 +36,9 @@ def get_games_by_name(name):
         if name in game_name:
             yield game_name
 
-def get_games_by_genre(genre):
-    for game_name in config.games:
-        game = config.games[game_name]
-        if genre in game["genre"]:
-            yield game_name
-
-def get_games_by_theme(theme):
-    for game_name in config.games:
-        game = config.games[game_name]
-        if theme == game["theme"]:
-            yield game_name
-
 def get_game_names():
     yield from config.games
 
 def get_game(game_name):
     assert game_name in config.games, "Game '{}' not defined in vgconfig.".format(str(game_name))
     return config.games[game_name]
-
-def get_games_by_year(year, match_type="on"):
-    """ 
-    Iterate through all of the games from a certain year. 
-    match_type can be:
-    on - only matches when the dates match.
-    before - Only matches games before a certain date.
-    after - Only matches games after a certain date.
-    """
-    assert match_type in ["on", "before", "after"]
-
-    for game_name in config.games:
-        game = config.games[game_name]
-        if match_type == "on" and game["year"] == year \
-        or match_type == "before" and game["year"] < year \
-        or match_type == "after" and game["year"] > year:
-            yield game_name
-

@@ -48,8 +48,8 @@ def add_game_info():
 
                 game_to_edit["id"] = game_to_copy.id
                 game_to_edit["year"] = int(datetime.fromtimestamp(game_to_copy.first_release_date.seconds).strftime("%Y"))
+                print("Updating {}.".format(game_title))
             else:
-                #print("No matches found for '{}'.".format(game_title.replace("_", " ")))
                 pass
             
             #with open(file_name, "w") as file:
@@ -59,7 +59,7 @@ def add_game_info():
             print("An error has occured: {}".format(str(e)))
     
     with open("games.json", "w") as games_file:
-        games_file.write(json.dumps(vgconfig.games))
+        games_file.write(json.dumps(vgconfig.games, indent=4))
 
 if __name__ == "__main__":
     vgconfig.verify()

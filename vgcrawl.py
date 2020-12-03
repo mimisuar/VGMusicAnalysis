@@ -1,6 +1,7 @@
 from bs4 import BeautifulSoup
 import requests
 import json
+import vgconfig
 
 base_url = "http://vgmusic.com"
 
@@ -28,7 +29,7 @@ def parse_vgmusic():
                         if name:
                             game_name = name
 
-                            config_games[game_name] = {"console": console_name, "year": 2000, "origin": "None", "songs": {}, "genre": [], "theme": "None", "id": 0}
+                            config_games[game_name] = {"console": console_name, "year": 2000, "songs": {}, "genre": [], "theme": [], "id": 0}
                         elif ".mid" in sub_link["href"]:
                             song_name = simplify(sub_link.string)
                             #print(game_name + "/" + song_name + ": "+ sub_link["href"])
@@ -38,7 +39,7 @@ def parse_vgmusic():
     else:
         r.raise_for_status()
 
-    with open("games.json", "w") as games:
+    with open(vgconfig.games_file, "w") as games:
         games.write(json.dumps(config_games, indent=4))
 
 if __name__ == "__main__":
