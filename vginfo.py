@@ -2,13 +2,16 @@
 This module adds some functions needed for crawling IGDB to add some information to the games.
 """
 from igdb.wrapper import IGDBWrapper
-from igdb.igdbapi_pb2 import GameResult, Genre
+from igdb.igdbapi_pb2 import GameResult, GenreResult
 from datetime import datetime
 import requests
 import json
 import vgconfig
+import os
 
 auth_url = "https://id.twitch.tv/oauth2/token?client_id={0}&client_secret={1}&grant_type=client_credentials"
+genre_ids = None
+theme_ids = None
 
 def get_credentials():
     with open("secrets/igdb_auth.json", "r") as auth_file:
@@ -23,8 +26,54 @@ def get_credentials():
                 auth_file.write(json.dumps(creds))
     return creds
 
+def generate_genres(creds):
+    global genre_ids
+    if isinstance(genre_ids, dict):
+        return
+
+    if os.path.isfile(vgconfig.genres_file):
+        with open(vgconfig.genres_file, "r") as f:
+            genre_ids = json.loads(f.read())
+            return
+
+    wrapper = IGDBWrapper(creds["client_id"], creds["access_token"])
+    byte_array = wrapper.api_request(
+        'genres',
+        'fields name; limit 100;'
+    )
+
+    with open(vgconfig.genres_file, "wb") as f:
+        f.write(byte_array)
+
+    genre_ids = json.loads(byte_array)
+
+def generate_themes(creds):
+    global theme_ids
+    if isinstance(theme_ids, dict):
+        return
+
+    if os.path.isfile(vgconfig.themes_file):
+        with open(vgconfig.themes_file, "r") as f:
+            theme_ids = json.loads(f.read())
+            return
+
+    wrapper = IGDBWrapper(creds["client_id"], creds["access_token"])
+    byte_array = wrapper.api_request(
+        'themes',
+        'fields name; limit 100;'
+    )
+
+    with open(vgconfig.themes_file, "wb") as f:
+        f.write(byte_array)
+    
+    theme_ids = json.loads(byte_array)
+
 def add_game_info():
     creds = get_credentials()
+
+    generate_genres(creds)
+    generate_themes(creds)
+
     wrapper = IGDBWrapper(creds["client_id"], creds["access_token"])
     #byte_array = wrapper.api_request(
     #        'games',
@@ -37,7 +86,7 @@ def add_game_info():
         try:
             byte_array = wrapper.api_request(
                 'games.pb',
-                'fields name, first_release_date, genres; search "{}"; limit 1;'.format(game_title.replace("_", " "))
+                'fields name, first_release_date, genres, themes; search "{}"; limit 1;'.format(game_title.replace("_", " "))
             )
             #game_message = json.loads(byte_array)
             game_message = GameResult()
@@ -48,9 +97,9 @@ def add_game_info():
 
                 game_to_edit["id"] = game_to_copy.id
                 game_to_edit["year"] = int(datetime.fromtimestamp(game_to_copy.first_release_date.seconds).strftime("%Y"))
+                game_to_edit["themes"] = theme_ids_to_names(game_to_copy.themes)
+                game_to_edit["genres"] = genre_ids_to_names(game_to_copy.genres)
                 print("Updating {}.".format(game_title))
-            else:
-                pass
             
             #with open(file_name, "w") as file:
             #    file.write(json.dumps(response, indent=4))
@@ -59,8 +108,26 @@ def add_game_info():
             print("An error has occured: {}".format(str(e)))
     
     with open("games.json", "w") as games_file:
-        games_file.write(json.dumps(vgconfig.games, indent=4))
+        games_file.write(json.dumps(vgconfig.games, indent=4, sort_keys=True))
+
+def genre_ids_to_names(genre_list):
+    names = []
+    for genre in genre_list:
+        for genre_info in genre_ids:
+            if genre_info["id"] == genre.id:
+                names.append(genre_info["name"])
+    return names
+
+def theme_ids_to_names(theme_list):
+    names = []
+    for theme in theme_list:
+        for theme_info in theme_ids:
+            if theme_info["id"] == theme.id:
+                names.append(theme_info["name"])
+    return names
 
 if __name__ == "__main__":
     vgconfig.verify()
     add_game_info()
+    #pass
+    #generate_genre_ids()

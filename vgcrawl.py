@@ -29,7 +29,7 @@ def parse_vgmusic():
                         if name:
                             game_name = name
 
-                            config_games[game_name] = {"console": console_name, "year": 2000, "songs": {}, "genre": [], "theme": [], "id": 0}
+                            config_games[game_name] = {"console": console_name, "year": 2000, "songs": {}, "genres": [], "themes": [], "id": 0}
                         elif ".mid" in sub_link["href"]:
                             song_name = simplify(sub_link.string)
                             #print(game_name + "/" + song_name + ": "+ sub_link["href"])
