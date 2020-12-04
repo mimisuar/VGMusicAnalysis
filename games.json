@@ -645,7 +645,7 @@
             "overworld_1": "http://vgmusic.com/music/console/nintendo/nes/Adventure_Island_II-Overworld_1.mid",
             "overworld_2": "http://vgmusic.com/music/console/nintendo/nes/Adventure_Island_II-Overworld_2_%28Re-upload%29.mid",
             "overworld_3": "http://vgmusic.com/music/console/nintendo/nes/Adventure_Island_II-Overworld_3.mid",
-            "skip_this_island?": "http://vgmusic.com/music/console/nintendo/nes/Adventure_Island_II-Skip_This_Island.mid",
+            "skip_this_island ": "http://vgmusic.com/music/console/nintendo/nes/Adventure_Island_II-Skip_This_Island.mid",
             "snow_summit": "http://vgmusic.com/music/console/nintendo/nes/Adventure_Island_II-Snow_Summit_%28Version_2%29.mid",
             "title_screen": "http://vgmusic.com/music/console/nintendo/nes/Adventure_Island_II-Title_Screen.mid",
             "underwater_v1.1": "http://vgmusic.com/music/console/nintendo/nes/Adventure_Island_II-UnderwaterV2.mid",
@@ -4680,7 +4680,7 @@
             "town_-_my_home_2": "http://vgmusic.com/music/console/nintendo/snes/bof2town.mid",
             "twisted_bridge": "http://vgmusic.com/music/console/nintendo/snes/bof2drag.mid",
             "we_are_rangers!": "http://vgmusic.com/music/console/nintendo/snes/bof2rang.mid",
-            "what_is_it?": "http://vgmusic.com/music/console/nintendo/snes/BOF2WhatIsIt.mid",
+            "what_is_it ": "http://vgmusic.com/music/console/nintendo/snes/BOF2WhatIsIt.mid",
             "white_wings": "http://vgmusic.com/music/console/nintendo/snes/BOF2flying.mid",
             "white_wings_2": "http://vgmusic.com/music/console/nintendo/snes/BoF2_whitewings.mid",
             "white_wings_3": "http://vgmusic.com/music/console/nintendo/snes/BreathOfFire2WhiteWings.mid",
@@ -4722,7 +4722,7 @@
         ],
         "id": 18055,
         "songs": {
-            "?": "http://vgmusic.com/music/console/sony/ps1/Breath_of_Fire_III_109_DW.mid",
+            " ": "http://vgmusic.com/music/console/sony/ps1/Breath_of_Fire_III_109_DW.mid",
             "battle": "http://vgmusic.com/music/console/sony/ps1/attack.mid",
             "boss_battle": "http://vgmusic.com/music/console/sony/ps1/Bof3boss.mid",
             "boss_battle_2": "http://vgmusic.com/music/console/sony/ps1/bof3normboss.mid",
@@ -7553,8 +7553,8 @@
             "don_weaso's_theme_metal_remix": "http://vgmusic.com/music/console/nintendo/n64/N64__Conkers_Bad_Fur_Day__Don_Weasos_Theme__Metal_Remix.mid",
             "don_weaso's_theme_rock_remix": "http://vgmusic.com/music/console/nintendo/n64/cbfd_weaso_rock.mid",
             "franky": "http://vgmusic.com/music/console/nintendo/n64/Franky2.mid",
-            "going_down?": "http://vgmusic.com/music/console/nintendo/n64/cbfd_going_down.mid",
-            "going_down?_tropical_remix": "http://vgmusic.com/music/console/nintendo/n64/cbfd_goingdown_tropical.mid",
+            "going_down ": "http://vgmusic.com/music/console/nintendo/n64/cbfd_going_down.mid",
+            "going_down _tropical_remix": "http://vgmusic.com/music/console/nintendo/n64/cbfd_goingdown_tropical.mid",
             "great_mighty_poo_finale": "http://vgmusic.com/music/console/nintendo/n64/cbfdgmpoo4.mid",
             "heist": "http://vgmusic.com/music/console/nintendo/n64/cbfd_heist.mid",
             "it's_war": "http://vgmusic.com/music/console/nintendo/n64/cbfd-itswar.mid",
@@ -9455,7 +9455,7 @@
         ],
         "id": 21851,
         "songs": {
-            "is_it_admiration_for_overlord_laharl?": "http://vgmusic.com/music/console/sony/ps2/Disgaea_-_Is_It_Admiration_for_Overlord_Laharl.mid"
+            "is_it_admiration_for_overlord_laharl ": "http://vgmusic.com/music/console/sony/ps2/Disgaea_-_Is_It_Admiration_for_Overlord_Laharl.mid"
         },
         "themes": [
             "Action",
@@ -11623,7 +11623,7 @@
         "genres": [],
         "id": 84149,
         "songs": {
-            "ending_-_it's_good_if_it_ends_happily,_isn't_it?": "http://vgmusic.com/music/console/sega/genesis/dynamiteheaddy-endingXG.mid",
+            "ending_-_it's_good_if_it_ends_happily,_isn't_it ": "http://vgmusic.com/music/console/sega/genesis/dynamiteheaddy-endingXG.mid",
             "escape_hero_xg": "http://vgmusic.com/music/console/sega/genesis/dynamiteheaddy-escapeheroXG.mid",
             "fight_with_maruyama": "http://vgmusic.com/music/console/sega/genesis/FightWithMaruyama.mid",
             "headdy_the_hero_xg": "http://vgmusic.com/music/console/sega/genesis/dynamiteheaddy-headdytheheroXG.mid",
@@ -12200,7 +12200,7 @@
             "nanami": "http://vgmusic.com/music/console/sega/saturn/elnanami.mid",
             "night": "http://vgmusic.com/music/console/sega/saturn/elnight.mid",
             "perversion": "http://vgmusic.com/music/console/sega/saturn/elperverse.mid",
-            "return_to_earth_was_it_all_a_dream?": "http://vgmusic.com/music/console/sega/saturn/elearth.mid",
+            "return_to_earth_was_it_all_a_dream ": "http://vgmusic.com/music/console/sega/saturn/elearth.mid",
             "saves": "http://vgmusic.com/music/console/sega/saturn/elsaves.mid",
             "shayla": "http://vgmusic.com/music/console/sega/saturn/elshayla.mid",
             "the_holy_shrine_of_wind": "http://vgmusic.com/music/console/sega/saturn/elwind.mid",
@@ -12276,7 +12276,7 @@
         ],
         "id": 2747,
         "songs": {
-            "mission_20:_fancy_some_candy?": "http://vgmusic.com/music/console/nintendo/wii/fancy_some_candy.mid"
+            "mission_20:_fancy_some_candy ": "http://vgmusic.com/music/console/nintendo/wii/fancy_some_candy.mid"
         },
         "themes": [
             "Action"
@@ -12307,7 +12307,7 @@
         "id": 46218,
         "songs": {
             "a_sad_story": "http://vgmusic.com/music/console/sega/genesis/Elemental_Master-Sad_Story.mid",
-            "continue?": "http://vgmusic.com/music/console/sega/genesis/Elemental_Master-Continue.mid",
+            "continue ": "http://vgmusic.com/music/console/sega/genesis/Elemental_Master-Continue.mid",
             "ending": "http://vgmusic.com/music/console/sega/genesis/Elemental_Master-End_Credits_Ver3.mid",
             "game_over": "http://vgmusic.com/music/console/sega/genesis/Elemental_Master-GAME-OVER.mid",
             "introduction": "http://vgmusic.com/music/console/sega/genesis/Elemental_Master-Introduction.mid",
@@ -12611,7 +12611,7 @@
         ],
         "id": 38227,
         "songs": {
-            "save?": "http://vgmusic.com/music/console/nintendo/snes/B1L_exhaustheat_save.mid"
+            "save ": "http://vgmusic.com/music/console/nintendo/snes/B1L_exhaustheat_save.mid"
         },
         "themes": [],
         "year": 1992
@@ -14560,7 +14560,7 @@
             "underworld": "http://vgmusic.com/music/console/nintendo/snes/ff2under.mid",
             "underworld_2": "http://vgmusic.com/music/console/nintendo/snes/TheLandOfDwarves.mid",
             "underworld_3": "http://vgmusic.com/music/console/nintendo/snes/FF2_Underground.mid",
-            "wanna_see_something?__": "http://vgmusic.com/music/console/nintendo/snes/Wanna_See_Something_v1_1_Sequenced_by_Willow.mid",
+            "wanna_see_something __": "http://vgmusic.com/music/console/nintendo/snes/Wanna_See_Something_v1_1_Sequenced_by_Willow.mid",
             "within_the_giant": "http://vgmusic.com/music/console/nintendo/snes/ff2lsub.mid",
             "within_the_giant_2": "http://vgmusic.com/music/console/nintendo/snes/ff4-WithinTheGiant.mid",
             "within_the_giant_3": "http://vgmusic.com/music/console/nintendo/snes/Gigant_Of_Babil.mid"
@@ -15322,9 +15322,9 @@
             "unknown_lands": "http://vgmusic.com/music/console/nintendo/snes/FF5_Unknown_Lands-KM-GM.mid",
             "unknown_lands_gs": "http://vgmusic.com/music/console/nintendo/snes/FF5_Unknown_Lands-KM.mid",
             "victory": "http://vgmusic.com/music/console/nintendo/snes/FF5_a08.mid",
-            "what?": "http://vgmusic.com/music/console/nintendo/snes/FF5_what.mid",
-            "what?_2": "http://vgmusic.com/music/console/nintendo/snes/ff5whatV1_0_1.mid",
-            "what?_arranged": "http://vgmusic.com/music/console/nintendo/snes/29_What.mid",
+            "what ": "http://vgmusic.com/music/console/nintendo/snes/FF5_what.mid",
+            "what _2": "http://vgmusic.com/music/console/nintendo/snes/ff5whatV1_0_1.mid",
+            "what _arranged": "http://vgmusic.com/music/console/nintendo/snes/29_What.mid",
             "world_2": "http://vgmusic.com/music/console/nintendo/snes/unknownlands.mid",
             "world_2_2": "http://vgmusic.com/music/console/nintendo/snes/FF5_UnknownGM.mid",
             "world_2_xg": "http://vgmusic.com/music/console/nintendo/snes/FF5_Unknown.mid",
@@ -15651,7 +15651,7 @@
         "id": 409,
         "songs": {
             "boss_battle_-_turmoil": "http://vgmusic.com/music/console/sony/ps2/turmoil.mid",
-            "conflict_-_you_want_to_live_forever?": "http://vgmusic.com/music/console/sony/ps2/conflict1.mid",
+            "conflict_-_you_want_to_live_forever ": "http://vgmusic.com/music/console/sony/ps2/conflict1.mid",
             "currents_of_time": "http://vgmusic.com/music/console/sony/ps2/currents.mid",
             "faded_memories_-_promyvion": "http://vgmusic.com/music/console/sony/ps2/promyvion.mid",
             "happily_ever_after": "http://vgmusic.com/music/console/sony/ps2/ff11_happily.mid",
@@ -17060,7 +17060,7 @@
         "songs": {
             "hotaru's_stage_-_fullmoon_-_heartfull": "http://vgmusic.com/music/console/snk/neogeo/Fullmoon.mid",
             "rock_howard's_stage": "http://vgmusic.com/music/console/snk/neogeo/Rock_Howard%5B1%5D.mid",
-            "too_honest?_-_theme_of_kim_jae_hoon": "http://vgmusic.com/music/console/snk/neogeo/Too_Honest.mid"
+            "too_honest _-_theme_of_kim_jae_hoon": "http://vgmusic.com/music/console/snk/neogeo/Too_Honest.mid"
         },
         "themes": [
             "Action"
@@ -21539,7 +21539,7 @@
         "songs": {
             "arashi_no_saxophone_2_-_yagami_team": "http://vgmusic.com/music/console/snk/neogeo/KOF9612.mid",
             "big_shot!_-_the_fatal_fury_team_v2.0": "http://vgmusic.com/music/console/snk/neogeo/Big_Shot.mid",
-            "esaka?_-_hero_team_version_2.0,_modified": "http://vgmusic.com/music/console/snk/neogeo/KOF9603.mid",
+            "esaka _-_hero_team_version_2.0,_modified": "http://vgmusic.com/music/console/snk/neogeo/KOF9603.mid",
             "fairy_-_chizuru_kagura": "http://vgmusic.com/music/console/snk/neogeo/Fairy.mid",
             "geese_ni_katakore": "http://vgmusic.com/music/console/snk/neogeo/Geese.mid",
             "get_'n_up_-_ladies_team": "http://vgmusic.com/music/console/snk/neogeo/GetNUp.mid",
@@ -21578,7 +21578,7 @@
             "176th_street_-_fatal_fury_team": "http://vgmusic.com/music/console/snk/neogeo/176th_Street_Final.mid",
             "crossfire_-_ending_credits_v1.1": "http://vgmusic.com/music/console/snk/neogeo/CrossfireB.mid",
             "dangerous_toys_-_story_demonstration_1_v1.2": "http://vgmusic.com/music/console/snk/neogeo/DangerousToysC.mid",
-            "esaka?_acid_mix_-_kyo_kusanagi_1_and_2": "http://vgmusic.com/music/console/snk/neogeo/The_King_of_Fighters_%2799_-_Millennium_Battle_-_Track_13_-_Esaka_%28Acid_Mix%29.mid",
+            "esaka _acid_mix_-_kyo_kusanagi_1_and_2": "http://vgmusic.com/music/console/snk/neogeo/The_King_of_Fighters_%2799_-_Millennium_Battle_-_Track_13_-_Esaka_%28Acid_Mix%29.mid",
             "kd-0079_-_hero_team_v2.1": "http://vgmusic.com/music/console/snk/neogeo/KD-0079_Final.mid",
             "ryu-ko_-_the_art_of_fighting_team": "http://vgmusic.com/music/console/snk/neogeo/Ryu-ko_Final.mid",
             "sadistic_eyes_-_iori_yagami": "http://vgmusic.com/music/console/snk/neogeo/audiodem.mid",
@@ -24947,7 +24947,7 @@
             "fortune_teller": "http://vgmusic.com/music/console/nintendo/snes/mn-FortuneTeller.mid",
             "gradius_mini-game": "http://vgmusic.com/music/console/nintendo/snes/lmn-grad.mid",
             "house_2": "http://vgmusic.com/music/console/nintendo/snes/mn-house2.mid",
-            "how_about_a_burger?": "http://vgmusic.com/music/console/nintendo/snes/BL_mn_burger.mid",
+            "how_about_a_burger ": "http://vgmusic.com/music/console/nintendo/snes/BL_mn_burger.mid",
             "lottery_2": "http://vgmusic.com/music/console/nintendo/snes/mn-Lottery2.mid",
             "mole_mini-game": "http://vgmusic.com/music/console/nintendo/snes/Mninja-Mole.mid",
             "ninja_cat_kurobei_v1.1": "http://vgmusic.com/music/console/nintendo/snes/CatKurobei.mid",
@@ -27303,7 +27303,7 @@
             "in_the_pipe_2": "http://vgmusic.com/music/console/nintendo/n64/MP2WarpPipe.mid",
             "in_the_pipe_3": "http://vgmusic.com/music/console/nintendo/n64/mp2pipev1_1.mid",
             "in_the_pipe_sb_live!": "http://vgmusic.com/music/console/nintendo/n64/mp2_inpipe.mid",
-            "know_what_i_mean?": "http://vgmusic.com/music/console/nintendo/n64/MP2_You_Know_Now.mid",
+            "know_what_i_mean ": "http://vgmusic.com/music/console/nintendo/n64/MP2_You_Know_Now.mid",
             "look_away_sb_live!": "http://vgmusic.com/music/console/nintendo/n64/mp2_lookaway.mid",
             "mini_game_explanation_-_let_the_game_begin": "http://vgmusic.com/music/console/nintendo/n64/MP2_Mini-Game_Intro-KM.mid",
             "mini_game_land": "http://vgmusic.com/music/console/nintendo/n64/MP2MinigameLand.mid",
@@ -32782,7 +32782,7 @@
             "homely_yado_inn": "http://vgmusic.com/music/console/nintendo/gba/mother3-yadoinn.mid",
             "in_the_room": "http://vgmusic.com/music/console/nintendo/gba/mother3-intheroom.mid",
             "intro_chapter_field_-_mom's_old_home": "http://vgmusic.com/music/console/nintendo/gba/introfield2.mid",
-            "isn't_this_such_a_utopia!?_v1.1": "http://vgmusic.com/music/console/nintendo/gba/GBA__Mother_3_Japan__Isnt_This_Such_a_Utopia__v1.1.mid",
+            "isn't_this_such_a_utopia! _v1.1": "http://vgmusic.com/music/console/nintendo/gba/GBA__Mother_3_Japan__Isnt_This_Such_a_Utopia__v1.1.mid",
             "like_looking_for_a_dropped_pickle": "http://vgmusic.com/music/console/nintendo/gba/M3_Like_looking_for_a_dropped_pickle.mid",
             "logo_title": "http://vgmusic.com/music/console/nintendo/gba/mother3title.mid",
             "love_theme": "http://vgmusic.com/music/console/nintendo/gba/mother3lovetheme2.mid",
@@ -32826,7 +32826,7 @@
             "to_sunshine_forest": "http://vgmusic.com/music/console/nintendo/gba/mother3_sunshineforest.mid",
             "unfounded_revenge": "http://vgmusic.com/music/console/nintendo/gba/Mother_3_-_Unfounded_Revenge.mid",
             "unfounded_revenge_2": "http://vgmusic.com/music/console/nintendo/gba/mother3-unfoundedrevenge.mid",
-            "what_now?": "http://vgmusic.com/music/console/nintendo/gba/Zenkusa_-_Mother3Jpn_WhatNow.mid",
+            "what_now ": "http://vgmusic.com/music/console/nintendo/gba/Zenkusa_-_Mother3Jpn_WhatNow.mid",
             "youth": "http://vgmusic.com/music/console/nintendo/gba/youthm3.mid",
             "zombie_battle_-_zombeat": "http://vgmusic.com/music/console/nintendo/gba/Zombeat.mid"
         },
@@ -35535,7 +35535,7 @@
             "ace_attorney:_trial": "http://vgmusic.com/music/console/nintendo/ds/DSTrial.mid",
             "ace_attorney:_trial_xg": "http://vgmusic.com/music/console/nintendo/ds/PWAATrialXG.mid",
             "blue_badger_theme_music_box_remix": "http://vgmusic.com/music/console/nintendo/ds/blue_badger_music_box.mid",
-            "damon_gant:_swimming,_anyone?": "http://vgmusic.com/music/console/nintendo/ds/DamonGant.mid",
+            "damon_gant:_swimming,_anyone ": "http://vgmusic.com/music/console/nintendo/ds/DamonGant.mid",
             "detective_gumshoe's_theme": "http://vgmusic.com/music/console/nintendo/ds/Geijissu.mid",
             "dick_gumshoe:_detective_gumshoe": "http://vgmusic.com/music/console/nintendo/ds/VGumshoe.mid",
             "examination:_allegro__v2.3": "http://vgmusic.com/music/console/nintendo/ds/VGAllegro.mid",
@@ -37956,7 +37956,7 @@
         "id": 0,
         "songs": {
             "area_c_xg": "http://vgmusic.com/music/console/sega/genesis/PuyoPuyo2_AreaC_XG.mid",
-            "continue_or_die?_v2.0": "http://vgmusic.com/music/console/sega/genesis/PuyoPuyo2_ContinueScreen_GMv2.mid",
+            "continue_or_die _v2.0": "http://vgmusic.com/music/console/sega/genesis/PuyoPuyo2_ContinueScreen_GMv2.mid",
             "pinch!": "http://vgmusic.com/music/console/sega/genesis/PuyoPuyo2_Pinch_GM.mid"
         },
         "themes": [],
@@ -41142,7 +41142,7 @@
         "genres": [],
         "id": 80113,
         "songs": {
-            "scooby_doo!_where_are_you?": "http://vgmusic.com/music/console/nintendo/snes/scooby1.mid"
+            "scooby_doo!_where_are_you ": "http://vgmusic.com/music/console/nintendo/snes/scooby1.mid"
         },
         "themes": [
             "Action"
@@ -41257,8 +41257,8 @@
             "credits_-_the_second_truth_from_the_left": "http://vgmusic.com/music/console/nintendo/snes/som_credits.mid",
             "credits_-_the_second_truth_from_the_left_2": "http://vgmusic.com/music/console/nintendo/snes/Seiken_Densetsu_2_-_The_Second_Truth_From_the_Left.mid",
             "credits_-_the_second_truth_from_the_left_3": "http://vgmusic.com/music/console/nintendo/snes/2ndtruth.mid",
-            "did_you_see_the_sea?_": "http://vgmusic.com/music/console/nintendo/snes/somSei2-18x.mid",
-            "did_you_see_the_sea?_2": "http://vgmusic.com/music/console/nintendo/snes/Did_You_See_The_Sea.mid",
+            "did_you_see_the_sea _": "http://vgmusic.com/music/console/nintendo/snes/somSei2-18x.mid",
+            "did_you_see_the_sea _2": "http://vgmusic.com/music/console/nintendo/snes/Did_You_See_The_Sea.mid",
             "dwarf_village_-_happenings_on_a_moonlit_night": "http://vgmusic.com/music/console/nintendo/snes/som_dwarfs.mid",
             "dwarf_village_-_happenings_on_a_moonlit_night_2": "http://vgmusic.com/music/console/nintendo/snes/Seiken_Densetsu_2_-_Happenings_on_a_Moonlit_Night.mid",
             "dwarf_village_-_happenings_on_a_moonlit_night_3": "http://vgmusic.com/music/console/nintendo/snes/SOM31.mid",
@@ -41543,9 +41543,9 @@
             "boss_battle_-_nuclear_fusion_remix_2": "http://vgmusic.com/music/console/nintendo/snes/nfre2.mid",
             "breezin'": "http://vgmusic.com/music/console/nintendo/snes/SD3retu.mid",
             "breezin'_2": "http://vgmusic.com/music/console/nintendo/snes/sd370.mid",
-            "can_you_fly,_sister?": "http://vgmusic.com/music/console/nintendo/snes/SD3cfs.mid",
-            "can_you_fly,_sister?_2": "http://vgmusic.com/music/console/nintendo/snes/SD3_-_Can_You_Fly_Sister.mid",
-            "can_you_fly,_sister?_3": "http://vgmusic.com/music/console/nintendo/snes/sd340.mid",
+            "can_you_fly,_sister ": "http://vgmusic.com/music/console/nintendo/snes/SD3cfs.mid",
+            "can_you_fly,_sister _2": "http://vgmusic.com/music/console/nintendo/snes/SD3_-_Can_You_Fly_Sister.mid",
+            "can_you_fly,_sister _3": "http://vgmusic.com/music/console/nintendo/snes/sd340.mid",
             "damn_damn_drum": "http://vgmusic.com/music/console/nintendo/snes/SD3drum.mid",
             "damn_damn_drum_2": "http://vgmusic.com/music/console/nintendo/snes/SD3Tropical.mid",
             "damn_damn_drum_3": "http://vgmusic.com/music/console/nintendo/snes/sd317.mid",
@@ -42090,7 +42090,7 @@
             "fangmei's_goodbye": "http://vgmusic.com/music/console/sega/dreamcast/fangmei_goodbye.mid",
             "fangmei's_theme": "http://vgmusic.com/music/console/sega/dreamcast/fangmei.mid",
             "green_market_qr.:_night": "http://vgmusic.com/music/console/sega/dreamcast/GRNMRK.mid",
-            "heads_or_tails?": "http://vgmusic.com/music/console/sega/dreamcast/headsortails_torch.mid",
+            "heads_or_tails ": "http://vgmusic.com/music/console/sega/dreamcast/headsortails_torch.mid",
             "lucky_lee_bar": "http://vgmusic.com/music/console/sega/dreamcast/luckyleebar.mid",
             "man_mo_bar": "http://vgmusic.com/music/console/sega/dreamcast/shenmue_bar_man_mo.mid",
             "queens_st.": "http://vgmusic.com/music/console/sega/dreamcast/Shenmue_2-Queens_St.mid",
@@ -44006,7 +44006,7 @@
             "live_and_learn_main_theme": "http://vgmusic.com/music/console/sega/dreamcast/LiveNLearn_SA2MainTheme.mid",
             "live_and_learn_main_theme_2": "http://vgmusic.com/music/console/sega/dreamcast/Live_And_Learn.mid",
             "lost_colony_xg": "http://vgmusic.com/music/console/sega/dreamcast/LostColony.mid",
-            "metal_harbor_-_can't_stop,_so_what?!": "http://vgmusic.com/music/console/sega/dreamcast/SA2_MetalHarborP2.mid",
+            "metal_harbor_-_can't_stop,_so_what !": "http://vgmusic.com/music/console/sega/dreamcast/SA2_MetalHarborP2.mid",
             "metal_harbor_arranged": "http://vgmusic.com/music/console/sega/dreamcast/sa_metalharbor.mid",
             "metal_harbour_#1": "http://vgmusic.com/music/console/sega/dreamcast/Sa2metal.mid",
             "metal_harbour_#1_2": "http://vgmusic.com/music/console/sega/dreamcast/Saiyajin_Metal_Harbor_1_V2.mid",
@@ -45961,7 +45961,7 @@
         "id": 7191,
         "songs": {
             "cathedral_level": "http://vgmusic.com/music/console/nec/tg16/splatcat.mid",
-            "the_end?_ending_theme": "http://vgmusic.com/music/console/nec/tg16/T_SplatterHouse_EndingTheme.mid"
+            "the_end _ending_theme": "http://vgmusic.com/music/console/nec/tg16/T_SplatterHouse_EndingTheme.mid"
         },
         "themes": [
             "Action",
@@ -47261,7 +47261,7 @@
             "the_road_-_ryu": "http://vgmusic.com/music/console/sony/ps1/Sfz3RyuF.mid",
             "the_road_-_ryu_2_v2.0": "http://vgmusic.com/music/console/sony/ps1/TheRoadVer2.mid",
             "theme_of_balrog_mike_bison": "http://vgmusic.com/music/console/sony/ps1/SFA3Balrog.mid",
-            "who'll_be_your_double?_-_character_select": "http://vgmusic.com/music/console/sony/ps1/WhollBeYourDouble.mid"
+            "who'll_be_your_double _-_character_select": "http://vgmusic.com/music/console/sony/ps1/WhollBeYourDouble.mid"
         },
         "themes": [
             "Action"
@@ -50523,7 +50523,7 @@
             "wi-fi_waiting_room": "http://vgmusic.com/music/console/nintendo/wii/SSBB_Waiting_Room.mid",
             "wi-fi_waiting_room_2": "http://vgmusic.com/music/console/nintendo/wii/SSBB_Online_Wait.mid",
             "yoshi_story_ending": "http://vgmusic.com/music/console/nintendo/wii/Yoshi_Story_Ending_Brawl.mid",
-            "you_call_this_a_utopia?!_v1.1": "http://vgmusic.com/music/console/nintendo/wii/YouCallThisaUtopiav2.mid",
+            "you_call_this_a_utopia !_v1.1": "http://vgmusic.com/music/console/nintendo/wii/YouCallThisaUtopiav2.mid",
             "zelda:_dark_world": "http://vgmusic.com/music/console/nintendo/wii/Z3DarkWorld2.mid"
         },
         "themes": [
@@ -51957,7 +51957,7 @@
             "bury_my_shell_at_wounded_knee": "http://vgmusic.com/music/console/nintendo/snes/Burymysh.mid",
             "bury_my_shell_at_wounded_knee_2": "http://vgmusic.com/music/console/nintendo/snes/tmnt_train.mid",
             "bury_my_shell_at_wounded_knee_3": "http://vgmusic.com/music/console/nintendo/snes/tmnt413.mid",
-            "continue?": "http://vgmusic.com/music/console/nintendo/snes/Turtles_Continue.mid",
+            "continue ": "http://vgmusic.com/music/console/nintendo/snes/Turtles_Continue.mid",
             "neon_night_riders_2": "http://vgmusic.com/music/console/nintendo/snes/tmnt414.mid",
             "neon_night_riders_highway": "http://vgmusic.com/music/console/nintendo/snes/TMNT4Highway.mid",
             "opening": "http://vgmusic.com/music/console/nintendo/snes/tmnt406.mid",
@@ -52375,7 +52375,7 @@
             "bowser's_stage_awe": "http://vgmusic.com/music/console/nintendo/snes/music_1e%28AWE%29.mid",
             "bowser's_stage_xg": "http://vgmusic.com/music/console/nintendo/snes/music_1e.mid",
             "bumpty's_stage": "http://vgmusic.com/music/console/nintendo/snes/bumpty.mid",
-            "continue...?": "http://vgmusic.com/music/console/nintendo/snes/ta_continue.mid",
+            "continue... ": "http://vgmusic.com/music/console/nintendo/snes/ta_continue.mid",
             "corderia's_stage_-_danger!": "http://vgmusic.com/music/console/nintendo/snes/pdp_corderia_panic_v1-5.mid",
             "credits": "http://vgmusic.com/music/console/nintendo/snes/Tetris_Attack_Credits.mid",
             "flying_wiggler": "http://vgmusic.com/music/console/nintendo/snes/TA-flying_wiggler.mid",
@@ -54544,7 +54544,7 @@
         "songs": {
             "bishamon": "http://vgmusic.com/music/console/sega/saturn/vsbisham.mid",
             "bulleta___b.b._hood_rapping": "http://vgmusic.com/music/console/sega/saturn/vsbbrap.mid",
-            "continue?": "http://vgmusic.com/music/console/sega/saturn/vscontin.mid",
+            "continue ": "http://vgmusic.com/music/console/sega/saturn/vscontin.mid",
             "credits_": "http://vgmusic.com/music/console/sega/saturn/vsend.mid",
             "credits_2": "http://vgmusic.com/music/console/sega/saturn/vsend2.mid",
             "credits_3": "http://vgmusic.com/music/console/sega/saturn/vsend3.mid",
@@ -55020,7 +55020,7 @@
         "songs": {
             "apharmd:_earth_light": "http://vgmusic.com/music/console/sega/saturn/Apharmd.mid",
             "bal_bas_bow:_ruins": "http://vgmusic.com/music/console/sega/saturn/Balbasbow2.mid",
-            "continue?": "http://vgmusic.com/music/console/sega/saturn/TVRCont.mid",
+            "continue ": "http://vgmusic.com/music/console/sega/saturn/TVRCont.mid",
             "dorkas:_everything_merges_with_the_night": "http://vgmusic.com/music/console/sega/saturn/Dorkas.mid",
             "ranking": "http://vgmusic.com/music/console/sega/saturn/TVRRank.mid",
             "temjin:_into_the_blue_sky": "http://vgmusic.com/music/console/sega/saturn/Temjin.mid"
@@ -55528,7 +55528,7 @@
         "id": 0,
         "songs": {
             "boss": "http://vgmusic.com/music/console/nintendo/gameboy/CB_WBBoss.mid",
-            "continue?": "http://vgmusic.com/music/console/nintendo/gameboy/wbcont.mid",
+            "continue ": "http://vgmusic.com/music/console/nintendo/gameboy/wbcont.mid",
             "final_boss": "http://vgmusic.com/music/console/nintendo/gameboy/Wario_Blast_-_Final_Boss.mid",
             "game_over": "http://vgmusic.com/music/console/nintendo/gameboy/wbgover.mid",
             "round_1:_normal_zone": "http://vgmusic.com/music/console/nintendo/gameboy/tm_warioblast_round1.mid",
@@ -55937,7 +55937,7 @@
         ],
         "id": 72470,
         "songs": {
-            "continue?": "http://vgmusic.com/music/console/nintendo/nes/JDC_RRContin.mid",
+            "continue ": "http://vgmusic.com/music/console/nintendo/nes/JDC_RRContin.mid",
             "death_jingle": "http://vgmusic.com/music/console/nintendo/nes/JDC_RRDeath.mid",
             "l.a._map_jazz_remix": "http://vgmusic.com/music/console/nintendo/nes/rrabbitmap.mid",
             "park_area": "http://vgmusic.com/music/console/nintendo/nes/RogerPark.mid",
@@ -56023,7 +56023,7 @@
         ],
         "id": 5281,
         "songs": {
-            "pose_mii:_ready?": "http://vgmusic.com/music/console/nintendo/wii/Ready.mid"
+            "pose_mii:_ready ": "http://vgmusic.com/music/console/nintendo/wii/Ready.mid"
         },
         "themes": [
             "Action",

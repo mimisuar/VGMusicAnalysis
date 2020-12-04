@@ -1,4 +1,4 @@
-import vgmusic, vgdownloader
+import vgmusic, vgdownloader, vgconfig
 from math import modf
 from collections import Counter
 from typing import Dict
@@ -47,9 +47,11 @@ class ConsoleData:
 
         return tmp_dict
 
-        
-
+import datetime
+start_time = datetime.datetime.now()
+vgconfig.verify()
 total_console_data = {}
+fail_count = 0
 for game_name in vgmusic.get_game_names():
     game = vgmusic.get_game(game_name) # game game game name game name game name namen ame
     console = game["console"]
@@ -61,6 +63,11 @@ for game_name in vgmusic.get_game_names():
 
     for song_name in vgmusic.get_songs_by_game(game_name):
         stream = vgmusic.fetch(game_name, song_name)
+
+        if stream == None:
+            #print("Unable to load {0}/{1}".format(game_name, song_name))
+            fail_count += 1
+            continue
         
         for gen_note in stream.flat.getElementsByClass("GeneralNote"):
             console_data.inc_gen_notes()
@@ -69,6 +76,11 @@ for game_name in vgmusic.get_game_names():
             elif "Rest" in gen_note.classes:
                 console_data.inc_rests(gen_note.duration.quarterLength)
         
+end_time = datetime.datetime.now()
+dt = end_time - start_time
+ms = int(dt.total_seconds() * 1000)
+print("Took {} ms".format(ms))
+print("Failed {} times.".format(fail_count))
 
 # fix data
 json_prepped = {}

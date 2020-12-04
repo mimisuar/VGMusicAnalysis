@@ -6,7 +6,7 @@ import vgconfig
 base_url = "http://vgmusic.com"
 
 def simplify(obj) -> str:
-    return str(obj).lower().replace(" ", "_").replace("\"", "").replace("(", "").replace(")", "").replace("/", "_").replace("\\", "_")
+    return str(obj).lower().replace(" ", "_").replace("\"", "").replace("(", "").replace(")", "").replace("/", "_").replace("\\", "_").replace("?", " ")
 
 def parse_vgmusic():
     config_games = {}
@@ -43,4 +43,8 @@ def parse_vgmusic():
         games.write(json.dumps(config_games, indent=4))
 
 if __name__ == "__main__":
+    import datetime
+    start_time = datetime.datetime.now()
     parse_vgmusic()
+
+    
