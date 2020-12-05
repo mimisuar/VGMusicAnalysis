@@ -125,16 +125,3 @@ def theme_ids_to_names(theme_list):
             if theme_info["id"] == theme.id:
                 names.append(theme_info["name"])
     return names
-
-if __name__ == "__main__":
-
-    vgconfig.verify()
-    
-    start_time = datetime.now()
-    add_game_info()
-    end_time = datetime.now()
-    dt = end_time - start_time
-    ms = int(dt.total_seconds() * 1000)
-    print("Took {} ms".format(ms))
-    #pass
-    #generate_genre_ids()
