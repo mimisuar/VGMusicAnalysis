@@ -33,11 +33,14 @@ def validate_files(forced):
             with open("{}".format(config.games_file), "w") as f:
                 f.write(json.dumps(config.games, indent=4, sort_keys=True))
 
+    with open("{}".format(config.games_file), "w") as f:
+        f.write(json.dumps(config.games, indent=4, sort_keys=True))
+
 if __name__ == "__main__":
     import sys
     forced = False
     if "--force" in sys.argv:
         forced = True
-    validate_files(forced)
+    validate_files(True)
     
     
