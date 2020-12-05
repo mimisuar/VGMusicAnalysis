@@ -26,7 +26,7 @@ def get_credentials():
                 auth_file.write(json.dumps(creds))
     return creds
 
-def generate_genres(creds):
+def generate_genres(creds=None):
     global genre_ids
     if isinstance(genre_ids, dict):
         return
@@ -47,7 +47,7 @@ def generate_genres(creds):
 
     genre_ids = json.loads(byte_array)
 
-def generate_themes(creds):
+def generate_themes(creds=None):
     global theme_ids
     if isinstance(theme_ids, dict):
         return
