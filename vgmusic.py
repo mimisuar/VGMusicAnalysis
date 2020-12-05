@@ -3,8 +3,9 @@ Public API for interacting with VGMusic database.
 """
 import vgmusic_config as vgconfig
 import vgmusic_info as vginfo
+from vgmusic_game import Game
 from music21 import converter, stream
-from typing import Generator, Dict, List
+from typing import Generator, Dict, List, Union
 
 def fetch(game_name: str, song_title: str) -> stream.Stream:
     """
@@ -40,6 +41,25 @@ def get_game(game_name: str) -> Dict:
     assert game_name in vgconfig.games, "Game '{}' not defined in vgconfig.".format(str(game_name))
     return vgconfig.games[game_name]
 
+def get_games() -> Generator[Game, None, None]:
+    for game_name in vgconfig.games:
+        yield Game(game_name, vgconfig.games[game_name])
+
+def get_games_by_console(console: str) -> Generator[Game, None, None]:
+    for game in get_games():
+        if game.console == console:
+            yield game
+
+def get_games_by_genres(genres: Union[str, List[str]]) -> Generator[Game, None, None]:
+    for game in get_games():
+        if game.has_genres(genres):
+            yield game
+
+def get_games_bythemes(themes: Union[str, List[str]]) -> Generator[Game, None, None]:
+    for game in get_games():
+        if game.has_themes(themes):
+            yield game
+
 def get_genre_names() -> Generator[str, None, None]:
     """ 
     Iterators through all the genre names. 
@@ -57,52 +77,6 @@ def get_themes_names() -> Generator[str, None, None]:
 
     for genre_dict in vginfo.theme_ids:
         yield genre_dict["name"]
-
-def get_games_by_genre(genre_name: str) -> Generator[str, None, None]:
-    """ 
-    Iterates through all of the game titles which contain a given genre. 
-    """
-    for game_name in get_game_names():
-        game = get_game(game_name)
-
-        if genre_name in game["genres"]:
-            yield game_name
-
-def get_games_by_genres(genre_list: List[str]) -> None:
-    """ 
-    Iterates through all of the game titles which contain all of the given genres. 
-    """
-    for game_name in get_game_names():
-        game = get_game(game_name)
-
-        for genre_name in genre_list:
-            if genre_name not in game["genres"]:
-                break
-        else:
-            yield game_name
-
-def get_games_by_theme(theme_name: str) -> Generator[str, None, None]:
-    """ 
-    Iterates through all of the game titles which contain a given theme. 
-    """
-    for game_name in get_game_names():
-        game = get_game(game_name)
-
-        if theme_name in game["themes"]:
-            yield game_name
-
-def get_games_by_themes(theme_list: List[str]) -> Generator[str, None, None]:
-    """ 
-    Iterates through all of the game titles which contain all of the given themes. 
-    """
-    for game_name in get_game_names():
-        game = get_game(game_name)
-
-        for theme_name in theme_list:
-            if theme_name not in game["themes"]:
-                break
-        else:
-            yield game_name
 
 # initialization code here:
 vgconfig.verify()
