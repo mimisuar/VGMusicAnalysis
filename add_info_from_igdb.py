@@ -1,6 +1,7 @@
 import datetime
 import vgmusic_config as vgconfig
 from vgmusic_info import *
+
 if __name__ == "__main__":
 
     vgconfig.verify()

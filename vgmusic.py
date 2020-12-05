@@ -16,9 +16,7 @@ def fetch(game_name: str, song_title: str) -> stream.Stream:
         
         song_stream = converter.parse(file_path)
     except Exception as e:
-        v = Exception()
-        v.args = "Unable to parse {0}/{1}: {2}".format(game_name, song_title, str(e))
-        raise v
+        raise Exception("Unable to parse {0}/{1}: {2}".format(game_name, song_title, str(e)))
     return song_stream
 
 def get_songs_by_game(game_name: str) -> Generator[str, None, None]:
