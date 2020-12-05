@@ -41,6 +41,9 @@ def get_game(game_name: str) -> Dict:
     assert game_name in vgconfig.games, "Game '{}' not defined in vgconfig.".format(str(game_name))
     return vgconfig.games[game_name]
 
+def get_game_by_name(game_name: str) -> Game:
+    return Game(game_name, get_game(game_name))
+
 def get_games() -> Generator[Game, None, None]:
     for game_name in vgconfig.games:
         yield Game(game_name, vgconfig.games[game_name])
