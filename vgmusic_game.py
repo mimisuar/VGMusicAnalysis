@@ -29,14 +29,17 @@ class Game:
         self.genres: List[str] = game_dict.get("genres")
         self.themes: List[str] = game_dict.get("themes")
         self.console: str = game_dict.get("console")
-        self.loadable: Dict[str, bool] =  game_dict.get("loadable")
-        self.songs: List[str] = [song_title for song_title in game_dict["songs"]]
+        #self.loadable: Dict[str, bool] =  game_dict.get("loadable")
+        self.songs: List[str] = []
+        for song_title in game_dict["songs"]:
+            if game_dict["songs"][song_title]["loadable"]:
+                self.songs.append(song_title)
         self.year: int = game_dict.get("year")
         self.id: int = game_dict.get("id")
 
     def fetch(self, song_title: str) -> Optional[stream.Stream]:
-        if song_title in self.loadable and not self.loadable[song_title]:
-            raise SkippedSongException("{0}/{1} marked unloadable. Skipping.".format(self.name, song_title))
+        #if song_title in self.loadable and not self.loadable[song_title]:
+        #    raise SkippedSongException("{0}/{1} marked unloadable. Skipping.".format(self.name, song_title))
 
         try:
             return vgmusic.fetch(self.name, song_title)
@@ -45,6 +48,8 @@ class Game:
     
     def fetch_all_songs(self) -> Generator[stream.Stream, None, None]:
         for song_title in self.songs:
+            if self.is_remix(song_title):
+                continue
             try:
                 yield self.fetch(song_title)
             except Exception as e:
@@ -71,4 +76,4 @@ class Game:
         return False
 
     def is_remix(self, song_title: str) -> bool:
-        return "remix" in song_title.lower()
+        return "remix" in song_title.lower() or "xg" in song_title.lower()

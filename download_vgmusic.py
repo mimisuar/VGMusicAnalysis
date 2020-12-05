@@ -40,7 +40,7 @@ def download_all_music() -> None:
                 continue
             
             
-            song_url = game["songs"][song_name]
+            song_url = game["songs"][song_name]["url"]
             try:
                 #song = converter.parse(song_url)
                 #song.write(fp=output_file, fmt="midi")

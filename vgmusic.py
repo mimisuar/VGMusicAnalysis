@@ -55,7 +55,7 @@ def get_games_by_genres(genres: Union[str, List[str]]) -> Generator[Game, None, 
         if game.has_genres(genres):
             yield game
 
-def get_games_bythemes(themes: Union[str, List[str]]) -> Generator[Game, None, None]:
+def get_games_by_themes(themes: Union[str, List[str]]) -> Generator[Game, None, None]:
     for game in get_games():
         if game.has_themes(themes):
             yield game
