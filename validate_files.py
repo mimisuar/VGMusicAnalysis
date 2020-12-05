@@ -2,7 +2,7 @@ import vgmusic
 import vgmusic_config as config
 import json
 
-GAME_CHECKPOINT = 10 # save the file after every 10 games
+GAME_CHECKPOINT = 20 # save the file after every 10 games
 
 def validate_files(forced):
     counter = GAME_CHECKPOINT
@@ -12,6 +12,7 @@ def validate_files(forced):
 
         if "loadable" not in game:
             game["loadable"] = {}
+            counter -= 1
 
         for song_title in vgmusic.get_songs_by_game(game_name):
             if not forced and song_title in game["loadable"]:
@@ -25,7 +26,7 @@ def validate_files(forced):
                 print(str(e))
                 game["loadable"][song_title] = False
         
-        counter -= 1
+        
         if counter == 0:
             counter = GAME_CHECKPOINT
             print("Saving to file...")

@@ -16,14 +16,14 @@ class Game:
         self.name = game_name
         self.load_dict(game_dict)
 
-    def load_dict(self, game_dict):
-        self.genres = game_dict["genres"]
-        self.themes = game_dict["themes"]
-        self.console = game_dict["console"]
-        self.loadable =  game_dict["loadable"]
+    def load_dict(self, game_dict: Dict):
+        self.genres = game_dict.get("genres")
+        self.themes = game_dict.get("themes")
+        self.console = game_dict.get("console")
+        self.loadable =  game_dict.get("loadable")
         self.songs = [song_title for song_title in game_dict["songs"]]
-        self.year = game_dict["year"]
-        self.id = game_dict["id"]
+        self.year = game_dict.get("year")
+        self.id = game_dict.get("id")
 
     def fetch(self, song_title: str) -> Optional[stream.Stream]:
         if song_title in self.loadable and not self.loadable[song_title]:
