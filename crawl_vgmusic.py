@@ -1,7 +1,7 @@
 from bs4 import BeautifulSoup
 import requests
 import json
-import vgconfig
+import vgmusic_config as vgconfig
 
 base_url = "http://vgmusic.com"
 

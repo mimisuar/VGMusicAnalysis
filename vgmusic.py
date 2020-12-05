@@ -1,7 +1,8 @@
 """ 
-Public API for interacting with VGMusic database. 
+Public API for interacting with VGMusic database.
 """
-import vginfo, vgconfig
+import vgmusic_config as vgconfig
+import vgmusic_info as vginfo
 from music21 import converter, stream
 from typing import Generator, Dict, List
 

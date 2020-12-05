@@ -6,7 +6,7 @@ from igdb.igdbapi_pb2 import GameResult, GenreResult
 from datetime import datetime
 import requests
 import json
-import vgconfig
+import vgmusic_config as vgconfig
 import os
 
 auth_url = "https://id.twitch.tv/oauth2/token?client_id={0}&client_secret={1}&grant_type=client_credentials"

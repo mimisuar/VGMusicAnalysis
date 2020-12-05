@@ -1,7 +1,7 @@
 # a module that helps with download files from vgmusic.com :)
 import requests
 import os
-import vgconfig as config
+import vgmusic_config as config
 from typing import Tuple, List
 
 def print2(text) -> None:
