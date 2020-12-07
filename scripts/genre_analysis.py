@@ -187,7 +187,7 @@ def calculate_for_unknown_games():
     
     final_dict = {}
     for game in vgmusic.get_games_by_console("nes"):
-        if "mega_man" not in game.name.lower():
+        if game.id > 0:
             continue
         print(game.name)
         genres_sum = {}
@@ -212,9 +212,9 @@ def calculate_for_unknown_games():
         genres_avg.sort(key=sort_genre_data, reverse=True)
         
         top_3 = genres_avg[0:3]
-        final_dict[game.name] = genres_avg
+        final_dict[game.name] = top_3
 
-    with open("test_output/megaman.json", "w") as f:
+    with open("test_output/unknown_genres.json", "w") as f:
         f.write(json.dumps(final_dict, indent=4))
 
 if __name__ == "__main__":
