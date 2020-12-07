@@ -82,35 +82,30 @@ class SongDataTracker:
                 self.total_rest_length += gennote.duration.quarterLength
                 self.rest_count += 1
 
-    def compare_stream(self, song_str: stream.Stream) -> float:
-        notes_in_range = 0
-        note_count = 0
+    def compare_stream(self, song_str: stream.Stream, sdt) -> float:
+        #notes_in_range = 0
+        #note_count = 0
         #for note_obj in song_str.flat.getElementsByClass(note.Note):
         #    if self.lowest_note <= note_obj.pitch.ps <= self.highest_note:
         #        notes_in_range += 1
         #    note_count += 1
-        perc_in_range = 0.0
-
-        #sdt = SongDataTracker()
-        #sdt.process_stream(song_str)
+        #perc_in_range = 0.0
     
-        #range_diff = abs(sdt.range - self.range)
-        #range_diff_score = 1.0 - range_diff / 100.0
-        #print("{0} -> {1}".format(range_diff, range_diff_score))
+        range_diff = abs(sdt.range - self.range)
+        range_diff_score = 1.0 - range_diff / 100.0
 
-        #ntr_diff_score = abs(sdt.get_notes_to_rests() - self.get_notes_to_rests())
+        ntr_diff_score = abs(sdt.get_notes_to_rests() - self.get_notes_to_rests())
 
-        #avg_note_diff = abs(sdt.get_avg_note() - self.get_avg_note())
-        #avg_rest_diff = abs(sdt.get_avg_rest() - self.get_avg_rest())
+        avg_note_diff = abs(sdt.get_avg_note() - self.get_avg_note())
+        avg_rest_diff = abs(sdt.get_avg_rest() - self.get_avg_rest())
 
-        #scores = [perc_in_range, range_diff_score, ntr_diff_score, avg_note_diff, avg_rest_diff]
-        #weights = [0.2, 0.2, 0.2, 0.2, 0.2]
+        scores = [range_diff_score, ntr_diff_score, avg_note_diff, avg_rest_diff]
+        weights = [0.2, 0.2, 0.2, 0.2]
         
-        #tmp_sum = 0
-        #for i in range(len(scores)):
-        #    tmp_sum += scores[i] * weights[i]
-        #return tmp_sum
-        return 0.0
+        tmp_sum = 0
+        for i in range(len(scores)):
+            tmp_sum += scores[i] * weights[i]
+        return tmp_sum
 
 class GenreDataTracker:
     def __init__(self):
@@ -131,11 +126,11 @@ class GenreDataTracker:
         else:
             return (ranges[size // 2] + ranges[size // 2 + 1]) / 2.0
 
-    def compare(self, song: stream.Stream) -> float:
+    def compare(self, song: stream.Stream, song_dt: SongDataTracker) -> float:
         # given a stream, test the probability the stream belonds to this genre. 
         probs = []
         for sdt in self.song_trackers:
-            probs.append(sdt.compare_stream(song))
+            probs.append(sdt.compare_stream(song, song_dt))
         return sum(probs) / len(probs)
 
     def to_dict(self):
@@ -171,17 +166,14 @@ def calculate_stats_for_genres():
                     if genre not in genres:
                         genres[genre] = GenreDataTracker()
                     genres[genre].append(main_tracker)
-                break
     
     final_dict = {}
     for genre in genres:
         final_dict[genre] = genres[genre].to_dict()
     with open("test_output/nes.json", "w") as f:
         f.write(json.dumps(final_dict, indent=4))
-                
-
-if __name__ == "__main__":
-    #calculate_stats_for_genres()
+            
+def calculate_for_unknown_games():
     with open("test_output/nes.json", "r") as f:
         raw_data = json.loads(f.read())
     genres: Dict[str, GenreDataTracker] = {}
@@ -189,6 +181,9 @@ if __name__ == "__main__":
         gdt = GenreDataTracker()
         gdt.from_dict(raw_data[genre])
         genres[genre] = gdt
+
+    def sort_genre_data(genre_data):
+        return genre_data[1]
     
     final_dict = {}
     for game in vgmusic.get_games_by_console("nes"):
@@ -198,11 +193,13 @@ if __name__ == "__main__":
         genres_sum = {}
         genres_total = {}
         for song in game.fetch_all_songs():
+            sdt = SongDataTracker()
+            sdt.process_stream(song)
             for genre in genres:
                 if genre not in genres_sum:
                     genres_sum[genre] = 0.0
                     genres_total[genre] = 0
-                genres_sum[genre] += genres[genre].compare(song)
+                genres_sum[genre] += genres[genre].compare(song, sdt)
                 genres_total[genre] += 1
         genres_avg = []
         for genre in genres_sum:
@@ -212,9 +209,6 @@ if __name__ == "__main__":
             )
             genres_avg.append(genre_data)
 
-        def sort_genre_data(genre_data):
-            return genre_data[1]
-
         genres_avg.sort(key=sort_genre_data, reverse=True)
         
         top_3 = genres_avg[0:3]
@@ -222,5 +216,9 @@ if __name__ == "__main__":
 
     with open("test_output/megaman.json", "w") as f:
         f.write(json.dumps(final_dict, indent=4))
+
+if __name__ == "__main__":
+    #calculate_stats_for_genres()
+    calculate_for_unknown_games()
     
     
