@@ -1,12 +1,9 @@
-from bs4 import BeautifulSoup
-import requests
-import json
+
 import vgmusic_config as vgconfig
 
 base_url = "http://vgmusic.com"
 
-def simplify(obj) -> str:
-    return str(obj).lower().replace(" ", "_").replace("\"", "").replace("(", "").replace(")", "").replace("/", "_").replace("\\", "_").replace("?", " ")
+
 
 def parse_vgmusic():
     config_games = {}

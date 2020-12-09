@@ -4,6 +4,9 @@ vgmusic_downloads/
 #just for testing :)
 test_output/
 
+# part of removing the old structure
+__old__/
+
 # so close, yet so far...
 secrets/
 
