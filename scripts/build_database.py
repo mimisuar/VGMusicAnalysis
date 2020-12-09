@@ -1,3 +1,6 @@
+import os, sys
+sys.path.append(os.getcwd())
+
 from bs4 import BeautifulSoup
 from igdb.wrapper import IGDBWrapper
 from igdb.igdbapi_pb2 import GameResult
