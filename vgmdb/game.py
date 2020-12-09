@@ -1,5 +1,6 @@
 from __future__ import annotations
-import vgmdb.genre, vgmdb.theme, vgmdb.platform
+from typing import Generator
+import vgmdb.genre, vgmdb.theme, vgmdb.platform, vgmdb.song
 
 class Game:
     def __init__(self) -> None:
@@ -53,6 +54,10 @@ class Game:
 
     def add_platform(self, platform: vgmdb.platform.Platform) -> None:
         self._platforms.append(platform)
+
+    def get_songs(self) -> Generator[vgmdb.song.Song, None, None]:
+        for song in self._songs:
+            yield vgmdb.song.Song(self.name, song, self._songs[song])
 
     def encode(self) -> dict:
         return {
