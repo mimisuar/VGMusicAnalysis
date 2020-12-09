@@ -1,13 +1,14 @@
 from __future__ import annotations
+from vgmdb.databaseobj import DatabaseObject
 
 GENREDATA = []
 import json
 with open("vgmdb/data/genres.json", "r") as f:
     GENREDATA = json.load(f)
 
-class Genre:
+class Genre(DatabaseObject):
     def __init__(self, id: int):
-        self.id = id
+        super().__init__(id)
         self.name = ""
 
         for genre_info in GENREDATA:
@@ -16,6 +17,9 @@ class Genre:
                 break
         else:
             raise Exception("Invalid genre id {}.".format(id))
+
+    def __eq__(self, other: Genre) -> bool:
+        return self.id == other.id
 
     def encode(self) -> int:
         return self.id

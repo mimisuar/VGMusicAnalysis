@@ -13,8 +13,11 @@ class Song:
         return "{0}/{1}/{2}.mid".format(DEFAULT_DOWNLOAD_FOLDER, self.game_name, self.song_url)
 
     def download(self):
+        if not os.path.isdir(DEFAULT_DOWNLOAD_FOLDER):
+            os.mkdir(DEFAULT_DOWNLOAD_FOLDER)
+
         song_data = requests.get(self.song_url)
-        with open(self.get_filename(), "rb") as f:
+        with open(self.get_filename(), "wb") as f:
             f.write(song_data)
 
     def fetch(self):

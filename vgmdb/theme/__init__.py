@@ -1,13 +1,14 @@
 from __future__ import annotations
+from vgmdb.databaseobj import DatabaseObject
 
 THEMEDATA = []
 import json
 with open("vgmdb/data/themes.json", "r") as f:
     THEMEDATA = json.load(f)
 
-class Theme:
+class Theme(DatabaseObject):
     def __init__(self, id: int):
-        self.id = id
+        super().__init__(id)
         self.name = ""
 
         for theme_info in THEMEDATA:

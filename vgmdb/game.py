@@ -1,10 +1,11 @@
 from __future__ import annotations
-from typing import Generator
+from typing import Generator, List
 import vgmdb.genre, vgmdb.theme, vgmdb.platform, vgmdb.song
+from vgmdb.databaseobj import DatabaseObject
 
-class Game:
-    def __init__(self) -> None:
-        self._id = 0
+class Game(DatabaseObject):
+    def __init__(self, id:int=0) -> None:
+        super().__init__(id)
         self._genres = []
         self._themes = []
         self._year = 0
@@ -12,8 +13,26 @@ class Game:
         self._name = ""
         self._songs = {}
 
-    def __eq__(self, other) -> bool:
+    def __eq__(self, other: Game) -> bool:
         return self.id == other.id and self.id > 0
+
+    def has_genre(self, genre: vgmdb.genre.Genre) -> bool:
+        return genre in self._genres
+
+    def has_genres(self, genres: List[vgmdb.genre.Genre]) -> bool:
+        for genre in genres:
+            if genre not in self._genres:
+                return False
+        return True
+
+    def has_platform(self, platform: vgmdb.platform.Platform) -> bool:
+        return platform in self._platforms
+
+    def has_platforms(self, platforms: List[vgmdb.platform.Platform]) -> bool:
+        for platform in platforms:
+            if platform not in self._platforms:
+                return False
+        return True
 
     @property
     def id(self) -> int:
