@@ -94,13 +94,14 @@ class SongDataTracker:
         range_diff = abs(sdt.range - self.range)
         range_diff_score = 1.0 - range_diff / 100.0
 
-        ntr_diff_score = abs(sdt.get_notes_to_rests() - self.get_notes_to_rests())
+        ntr_diff_score = 1.0 - abs(sdt.get_notes_to_rests() - self.get_notes_to_rests()) / 100.0
 
-        avg_note_diff = abs(sdt.get_avg_note() - self.get_avg_note())
-        avg_rest_diff = abs(sdt.get_avg_rest() - self.get_avg_rest())
+        avg_note_diff = 1.0 - abs(sdt.get_avg_note() - self.get_avg_note()) / 100.0
+        avg_rest_diff = 1.0 - abs(sdt.get_avg_rest() - self.get_avg_rest()) / 100.0
 
         scores = [range_diff_score, ntr_diff_score, avg_note_diff, avg_rest_diff]
-        weights = [0.2, 0.2, 0.2, 0.2]
+        weights = [0.25, 0.25, 0.25, 0.25]
+        print(scores)
         
         tmp_sum = 0
         for i in range(len(scores)):
@@ -209,7 +210,7 @@ def calculate_for_unknown_games():
             )
             genres_avg.append(genre_data)
 
-        genres_avg.sort(key=sort_genre_data, reverse=True)
+        genres_avg.sort(key=sort_genre_data)
         
         top_3 = genres_avg[0:3]
         final_dict[game.name] = top_3
