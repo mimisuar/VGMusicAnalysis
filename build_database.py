@@ -35,7 +35,7 @@ def find_game_info(game_title: str) -> GameResult:
     
     byte_array = wrapper.api_request(
                 'games.pb',
-                'fields name, first_release_date, genres, themes; search "{}"; limit 1;'.format(game_title)
+                'fields name, first_release_date, genres, themes, platforms; search "{}"; limit 1;'.format(game_title)
             )
     game_message = GameResult()
     game_message.ParseFromString(byte_array)
@@ -66,13 +66,16 @@ def generate_database() -> vgmdb.Database:
                             game = vgmdb.Game()
                             db.add_game(game)
                             #config_games[game_name] = {"console": console_name, "year": 2000, "songs": {}, "genres": [], "themes": [], "id": 0}
+                            print("Adding {}...".format(name))
                             game.name = simplify(name)
                             game_message = find_game_info(game.name)
                             if game_message:
                                 for theme_id in game_message.themes:
-                                    game.add_theme(vgmdb.Theme(theme_id))
+                                    game.add_theme(vgmdb.Theme(theme_id.id))
                                 for genre_id in game_message.genres:
-                                    game.add_genre(vgmdb.Genre(genre_id))
+                                    game.add_genre(vgmdb.Genre(genre_id.id))
+                                for platform_id in game_message.platforms:
+                                    game.add_platform(vgmdb.Platform(platform_id.id))
                                 game.year = int(datetime.datetime.fromtimestamp(game_message.first_release_date.seconds).strftime("%Y"))
                                 game.id = game_message.id
 
@@ -90,5 +93,5 @@ def generate_database() -> vgmdb.Database:
 
 if __name__ == "__main__":
     db = generate_database()
-    with open("db.json", "w") as f:
+    with open("vgmdb/data/games.json", "w") as f:
         json.dump(db.encode(), f, indent=4)

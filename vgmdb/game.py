@@ -1,5 +1,5 @@
 from __future__ import annotations
-import vgmdb.genre, vgmdb.theme
+import vgmdb.genre, vgmdb.theme, vgmdb.platform
 
 class Game:
     def __init__(self) -> None:
@@ -51,17 +51,17 @@ class Game:
     def add_theme(self, theme: vgmdb.theme.Theme) -> None:
         self._themes.append(theme)
 
-    def add_platform(self, console_id: int) -> None:
-        self._consoles.append(console_id)
+    def add_platform(self, platform: vgmdb.platform.Platform) -> None:
+        self._platforms.append(platform)
 
     def encode(self) -> dict:
         return {
             "id": self._id,
             "name": self._name,
             "songs": self._songs,
-            "genres": self._genres,
-            "themes": self._themes,
-            "consoles": self._consoles,
+            "genres": [genre.encode() for genre in self._genres],
+            "themes": [theme.encode() for theme in self._themes],
+            "platforms": [pform.encode() for pform in self._platforms],
         }
 
     @classmethod
@@ -71,8 +71,10 @@ class Game:
         game_inst._id = dict_inst.get("id", 0)
         game_inst._name = dict_inst.get("name", "")
         game_inst._consoles = dict_inst.get("consoles", [])
-        game_inst._genres = dict_inst.get("genres", [])
-        game_inst._themes = dict_inst.get("themes", [])
+        game_inst._genres = [vgmdb.genre.Genre.decode(id) for id in dict_inst.get("genres", [])]
+        game_inst._themes = [vgmdb.theme.Theme.decode(id) for id in dict_inst.get("themes", [])]
+        game_inst._platforms = [vgmdb.platform.Platform.decode(id) for id in dict_inst.get("platforms", [])]
+        #game_inst._themes = dict_inst.get("themes", [])
         return game_inst
 
     

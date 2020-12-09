@@ -6,7 +6,7 @@ with open("vgmdb/data/genres.json", "r") as f:
     GENREDATA = json.load(f)
 
 class Genre:
-    def __init__(self, id):
+    def __init__(self, id: int):
         self.id = id
         self.name = ""
 
@@ -15,7 +15,7 @@ class Genre:
                 self.name = genre_info["name"]
                 break
         else:
-            raise Exception("Invalid genre id {}.".format(self.id))
+            raise Exception("Invalid genre id {}.".format(id))
 
     def encode(self) -> int:
         return self.id

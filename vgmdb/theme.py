@@ -6,7 +6,7 @@ with open("vgmdb/data/themes.json", "r") as f:
     THEMEDATA = json.load(f)
 
 class Theme:
-    def __init__(self, id):
+    def __init__(self, id: int):
         self.id = id
         self.name = ""
 
@@ -15,7 +15,7 @@ class Theme:
                 self.name = theme_info["name"]
                 break
         else:
-            raise Exception("Invalid theme id {}.".format(self.id))
+            raise Exception("Invalid theme id {}.".format(id))
     
     def encode(self) -> int:
         return self.id
