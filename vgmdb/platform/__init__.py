@@ -18,23 +18,44 @@ PLATFORMCATS = [
 class Platform(DatabaseObject):
     def __init__(self, id: int):
         super().__init__(id)
-        self.name = ""
-        self.abbr = ""
-        self.category_id = 0
+        self._cat = -1
+        self._abbr = None
+        self._name = None
 
-        for pform_info in PLATFORMDATA:
-            if pform_info["id"] == id:
-                self.name = pform_info.get("name", "")
-                self.abbr = pform_info.get("abbreviation", "")
-                self.categroy_id = pform_info.get("category", 0)
-                break
-        else:
-            raise Exception("Invalid platform id \"{}\".".format(id))
+    @property
+    def name(self) -> str:
+        if not self._name:
+            for pform_info in PLATFORMDATA:
+                if pform_info["id"] == id:
+                    self.name = pform_info.get("name", "")
+                    break
+            else:
+                raise Exception("Invalid platform id \"{}\".".format(id))
+        return self.name
+
+    @property
+    def abbr(self) -> str:
+        if not self._abbr:
+            for pform_info in PLATFORMDATA:
+                if pform_info["id"] == id:
+                    self.abbr = pform_info.get("abbreviation", "")
+                    break
+            else:
+                raise Exception("Invalid platform id \"{}\".".format(id))
+        return self._abbr
 
     @property
     def category(self):
-        if 0 <= self.category_id < len(PLATFORMCATS):
-            return PLATFORMCATS[self.category_id]
+        if self._cat == -1:
+            for pform_info in PLATFORMDATA:
+                if pform_info["id"] == id:
+                    self._cat = pform_info.get("category", 0)
+                    break
+            else:
+                raise Exception("Invalid platform id \"{}\".".format(id))
+        
+        if 0 <= self._cat < len(PLATFORMCATS):
+            return PLATFORMCATS[self._cat]
         raise IndexError("Category is out of index!")
 
     def encode(self) -> int:

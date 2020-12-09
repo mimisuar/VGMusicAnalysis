@@ -9,14 +9,19 @@ with open("vgmdb/data/genres.json", "r") as f:
 class Genre(DatabaseObject):
     def __init__(self, id: int):
         super().__init__(id)
-        self.name = ""
+        self._name = None
 
-        for genre_info in GENREDATA:
-            if genre_info["id"] == id:
-                self.name = genre_info["name"]
-                break
-        else:
-            raise Exception("Invalid genre id {}.".format(id))
+    @property
+    def name(self) -> str:
+        if not self._name:
+            for genre_info in GENREDATA:
+                if genre_info["id"] == id:
+                    self._name = genre_info["name"]
+                    break
+            else:
+                raise Exception("Invalid genre id {}.".format(id))
+
+        return self._name
 
     def __eq__(self, other: Genre) -> bool:
         return self.id == other.id
