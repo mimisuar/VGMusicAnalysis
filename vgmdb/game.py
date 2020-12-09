@@ -1,4 +1,5 @@
 from __future__ import annotations
+import vgmdb.genre, vgmdb.theme
 
 class Game:
     def __init__(self) -> None:
@@ -6,7 +7,7 @@ class Game:
         self._genres = []
         self._themes = []
         self._year = 0
-        self._consoles = []
+        self._platforms = []
         self._name = ""
         self._songs = {}
 
@@ -44,13 +45,13 @@ class Game:
     def add_song(self, song_name: str, song_url: str) -> None:
         self._songs[song_name] = song_url
 
-    def add_genre(self, genre_id: int) -> None:
-        self._genres.append(genre_id)
+    def add_genre(self, genre: vgmdb.genre.Genre) -> None:
+        self._genres.append(genre)
 
-    def add_theme(self, theme_id: int) -> None:
-        self._themes.append(theme_id)
+    def add_theme(self, theme: vgmdb.theme.Theme) -> None:
+        self._themes.append(theme)
 
-    def add_console(self, console_id: int) -> None:
+    def add_platform(self, console_id: int) -> None:
         self._consoles.append(console_id)
 
     def encode(self) -> dict:

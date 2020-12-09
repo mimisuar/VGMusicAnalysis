@@ -1,15 +1,47 @@
 from bs4 import BeautifulSoup
+from igdb.wrapper import IGDBWrapper
+from igdb.igdbapi_pb2 import GameResult
+import datetime
 import requests
 import json
 import vgmdb
 
+BASE_URL = "http://vgmusic.com"
+AUTH_URL = "https://id.twitch.tv/oauth2/token?client_id={0}&client_secret={1}&grant_type=client_credentials"
+
+wrapper = None
+
 def simplify(obj) -> str:
     return str(obj).lower().replace("\"", "").replace("(", "").replace(")", "").replace("/", " ").replace("\\", " ").replace("?", " ").replace("_", " ")
 
-BASE_URL = "http://vgmusic.com"
+def get_credentials(force_auth:bool=False) -> list:
+    with open("secrets/igdb_auth.json", "r") as auth_file:
+        creds = json.loads(auth_file.read())
+    if force_auth or creds["access_token"] == "":
+        print("Authenticating with server.")
+        response = requests.post(AUTH_URL.format(creds["client_id"], creds["secret"]))
+        if response.status_code == requests.codes.ok:
+            response_json = json.loads(response.text)
+            creds["access_token"] = response_json["access_token"]
+            with open("secrets/igdb_auth.json", "w") as auth_file:
+                auth_file.write(json.dumps(creds))
+    return creds
 
-def fetch_info_from_igdb():
-    pass
+def find_game_info(game_title: str) -> GameResult:
+    global wrapper
+    if not wrapper:
+        creds = get_credentials()
+        wrapper = IGDBWrapper(creds["client_id"], creds["access_token"])
+    
+    byte_array = wrapper.api_request(
+                'games.pb',
+                'fields name, first_release_date, genres, themes; search "{}"; limit 1;'.format(game_title)
+            )
+    game_message = GameResult()
+    game_message.ParseFromString(byte_array)
+    if len(game_message.games) > 0:
+        return game_message.games[0]
+    return None
 
 def generate_database() -> vgmdb.Database:
     #config_games = {}
@@ -35,6 +67,17 @@ def generate_database() -> vgmdb.Database:
                             db.add_game(game)
                             #config_games[game_name] = {"console": console_name, "year": 2000, "songs": {}, "genres": [], "themes": [], "id": 0}
                             game.name = simplify(name)
+                            game_message = find_game_info(game.name)
+                            if game_message:
+                                for theme_id in game_message.themes:
+                                    game.add_theme(vgmdb.Theme(theme_id))
+                                for genre_id in game_message.genres:
+                                    game.add_genre(vgmdb.Genre(genre_id))
+                                game.year = int(datetime.datetime.fromtimestamp(game_message.first_release_date.seconds).strftime("%Y"))
+                                game.id = game_message.id
+
+                            
+
                         elif ".mid" in sub_link["href"]:
                             song_name = simplify(sub_link.string)
                             #print(game_name + "/" + song_name + ": "+ sub_link["href"])

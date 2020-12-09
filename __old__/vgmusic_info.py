@@ -86,9 +86,8 @@ def add_game_info():
         try:
             byte_array = wrapper.api_request(
                 'games.pb',
-                'fields name, first_release_date, genres, themes; search "{}"; limit 1;'.format(game_title.replace("_", " "))
+                'fields name, first_release_date, genres, themes; search "{}"; limit 1;'.format(game_title)
             )
-            #game_message = json.loads(byte_array)
             game_message = GameResult()
             game_message.ParseFromString(byte_array)
             if len(game_message.games) > 0:
