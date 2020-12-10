@@ -3,6 +3,15 @@ from typing import Generator, List
 import vgmdb.genre, vgmdb.theme, vgmdb.platform, vgmdb.song
 from vgmdb.databaseobj import DatabaseObject
 
+def issubset(sub: list, dom: list) -> bool:
+    """
+    This function returns true when every element in sub is in dom. Order doesn't matter hence 'subset' and not 'sublist'
+    """
+    for obj in sub:
+        if obj not in dom:
+            return False
+    return True
+
 class Game(DatabaseObject):
     def __init__(self, id:int=0) -> None:
         super().__init__(id)
@@ -20,19 +29,19 @@ class Game(DatabaseObject):
         return genre in self._genres
 
     def has_genres(self, genres: List[vgmdb.genre.Genre]) -> bool:
-        for genre in genres:
-            if genre not in self._genres:
-                return False
-        return True
+        return issubset(genres, self._genres)
 
     def has_platform(self, platform: vgmdb.platform.Platform) -> bool:
         return platform in self._platforms
 
     def has_platforms(self, platforms: List[vgmdb.platform.Platform]) -> bool:
-        for platform in platforms:
-            if platform not in self._platforms:
-                return False
-        return True
+        return issubset(platforms, self._platforms)
+
+    def has_theme(self, theme: vgmdb.theme.Theme) -> bool:
+        return theme in self._themes
+    
+    def has_themes(self, themes: List[vgmdb.theme.Theme]) -> bool:
+        return issubset(themes, self._themes)
 
     @property
     def id(self) -> int:
@@ -98,7 +107,7 @@ class Game(DatabaseObject):
         game_inst._genres = [vgmdb.genre.Genre.decode(id) for id in dict_inst.get("genres", [])]
         game_inst._themes = [vgmdb.theme.Theme.decode(id) for id in dict_inst.get("themes", [])]
         game_inst._platforms = [vgmdb.platform.Platform.decode(id) for id in dict_inst.get("platforms", [])]
-        #game_inst._themes = dict_inst.get("themes", [])
+        game_inst._songs = dict_inst.get("songs", {})
         return game_inst
 
     

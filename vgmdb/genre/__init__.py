@@ -15,13 +15,16 @@ class Genre(DatabaseObject):
     def name(self) -> str:
         if not self._name:
             for genre_info in GENREDATA:
-                if genre_info["id"] == id:
+                if genre_info["id"] == self.id:
                     self._name = genre_info["name"]
                     break
             else:
-                raise Exception("Invalid genre id {}.".format(id))
+                raise Exception("Invalid genre id {}.".format(self.id))
 
         return self._name
+
+    def __repr__(self) -> str:
+        return "Genre {0} (id:{1})".format(self.name, self.id)
 
     def __eq__(self, other: Genre) -> bool:
         return self.id == other.id

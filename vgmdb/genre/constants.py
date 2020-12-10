@@ -21,13 +21,3 @@ Arcade = Genre(33)
 VisualNovel = Genre(34)
 Board = Genre(35)
 MOBA = Genre(36)
-
-all = [
-PointAndClick,Fighting,
-Shooter,Music,Platform,
-Puzzle,Racing,RTS,RPG,
-Simulator,Sport,Strategy,TBS,
-Tactical ,HackAndSlash,
-Pinball,Adventure,Arcade,
-VisualNovel,Board,MOBA,
-]

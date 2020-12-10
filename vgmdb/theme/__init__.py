@@ -16,13 +16,15 @@ class Theme(DatabaseObject):
     def name(self) -> str:
         if not self._name:
             for theme_info in THEMEDATA:
-                if theme_info["id"] == id:
+                if theme_info["id"] == self.id:
                     self._name = theme_info["name"]
                     break
             else:
-                raise Exception("Invalid theme id {}.".format(id))
+                raise Exception("Invalid theme id {}.".format(self.id))
         return self._name
 
+    def __repr__(self) -> str:
+        return "Theme {0} (id:{1})".format(self.name, self.id)
     
     def encode(self) -> int:
         return self.id
